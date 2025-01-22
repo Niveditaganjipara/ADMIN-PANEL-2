@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel dashboard</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+
+    <!-- |..header.... -->
+
+    <header>
+        <div class="row justify-between coman-row">
+            <div class="row  align-center w-50 left-side-info">
+                <img src="images/logo.png" alt="">
+                <i class="fa-solid fa-bars"></i>
+                <div class="search-container">
+                    <form action="/action_page.php">
+                        <input type="text" placeholder="Search Something.." name="search" class="ff-roboto">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="row justify-end align-center w-50 right-side-details">
+                <div class="row justify-end align-center right-side-info">
+                    <img class="contry-img" src="images/us (1).svg" alt="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-bell" viewBox="0 0 16 16">
+                        <path
+                            d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-grid" viewBox="0 0 16 16">
+                        <path
+                            d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-gear" viewBox="0 0 16 16">
+                        <path
+                            d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0" />
+                        <path
+                            d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-moon" viewBox="0 0 16 16">
+                        <path
+                            d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286" />
+                    </svg>
+                </div>
+                <div class="row align-center justify-between last-bg">
+                    <div class="costmer-img">
+                        <img src="images/avatar-3.jpg" alt="">
+                    </div>
+                    <div class="custmear-name row justify-between align-center">
+                        <p class="ff-roboto">Samuel</p>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- |..section-left..navigation.. -->
+
+    <section class="navigation-left">
+        <div class="row">
+            <div class="w-13  py-0">
+                <div class="side-nav  bg-white">
+                    <ul>
+                        <li
+                            class="tt-upper fs-10 ff-roboto fw-400 fc-second side-nav-title padding-to-10px font-nunito">
+                            navigation
+                        </li>
+                        <li class="side-nav-item">
+                            <div class="row justify-between">
+                                <h3 class="h3-hover"><i class="bi bi-pc-display-horizontal "></i><span
+                                        class=" fs-14 ff-roboto fw-400 fc-second tt-capital menu-text h3-hover navigation font-nunito">dashboard</span>
+                                </h3>
+                                <span class=""><i class=" link-3 bi bi-3-square-fill "></i></span>
+                            </div>
+                        </li>
+                        <li class="tt-upper fs-10 ff-roboto fw-400 fc-second side-nav-title font-nunito">apps</li>
+                        <li class="side-nav-item">
+                            <div class="row justify-between">
+                                <h3 class="h3-hover"><i class="bi bi-calendar fs-16"></i><span
+                                        class=" fs-14 ff-roboto fw-400 fc-second tt-capital menu-text h3-hover navigation font-nunito">calender</span>
+                                </h3>
+                            </div>
+                        </li>
+                        <li class="side-nav-item">
+                            <div class="row justify-between">
+                                <h3 class="h3-hover"><i class="fa-regular fa-envelope fs-16"></i><span
+                                        class=" fs-14 ff-roboto fw-400 fc-second tt-capital menu-text h3-hover navigation font-nunito">email</span>
+                                </h3>
+                            </div>
+                        </li>
+                        <li class="side-nav-item">
+                            <div class="row justify-between">
+                                <h3 class="h3-hover"><i class="fa-solid fa-file-invoice fs-16"></i><span
+                                        class=" fs-14 ff-roboto fw-400 fc-second tt-capital menu-text h3-hover view-voice font-nunito">view
+                                        invoice</span></h3>
+                                <span><i class="fa-solid fa-angle-right fs-10"></i></span>
+                            </div>
+                        </li>
+                        <li class="tt-upper fs-10 ff-roboto fw-400 fc-second side-nav-title font-nunito">extra pages
+                        </li>
+                        <li class="side-nav-item">
+                            <div class="row justify-between">
+                                <h3 class="h3-hover"><i class="bi bi-file-earmark fs-16"></i><span
+                                        class=" fs-14 ff-roboto fw-400 fc-second tt-capital menu-text h3-hover navigation font-nunito">timeline</span>
+                                </h3>
+                                <span><i class="fa-solid fa-angle-right fs-10"></i></span>
+                            </div>
+                        </li>
+                        <li class="side-nav-item">
+                            <div class="row justify-between">
+                                <h3 class="h3-hover"><i class="bi bi-people fs-16"></i><span
+                                        class=" fs-14 ff-roboto fw-400 fc-second tt-capital menu-text h3-hover navigation font-nunito">auth
+                                        pages</span></h3>
+                                <span><i class="fa-solid fa-angle-right fs-10"></i></span>
+                            </div>
+                        </li>
+                        <li class="side-nav-item">
+                            <div class="row justify-between">
+                                <h3 class="h3-hover"><i class="fa-solid fa-file-invoice fs-16"></i><span
+                                        class=" fs-14 ff-roboto fw-400 fc-second tt-capital menu-text h3-hover navigation view-voice font-nunito">error
+                                        pages</span></h3>
+                                <span><i class="fa-solid fa-angle-right fs-10"></i></span>
+                            </div>
+                        </li>
+                        <li class="tt-upper fs-10 ff-roboto fw-400 fc-second side-nav-title font-nunito">components</li>
+                        <li class="side-nav-item">
+                            <div class="row justify-between">
+                                <h3 class="h3-hover row align-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" class="fs-14" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" data-lucide="paintbrush"
+                                        class="lucide lucide-paintbrush ">
+                                        <path d="m14.622 17.897-10.68-2.913"></path>
+                                        <path
+                                            d="M18.376 2.622a1 1 0 1 1 3.002 3.002L17.36 9.643a.5.5 0 0 0 0 .707l.944.944a2.41 2.41 0 0 1 0 3.408l-.944.944a.5.5 0 0 1-.707 0L8.354 7.348a.5.5 0 0 1 0-.707l.944-.944a2.41 2.41 0 0 1 3.408 0l.944.944a.5.5 0 0 0 .707 0z">
+                                        </path>
+                                        <path
+                                            d="M9 8c-1.804 2.71-3.97 3.46-6.583 3.948a.507.507 0 0 0-.302.819l7.32 8.883a1 1 0 0 0 1.185.204C12.735 20.405 16 16.792 16 15">
+                                        </path>
+                                    </svg>
+                                    <span
+                                        class=" fs-14 ff-roboto fw-400 fc-second tt-capital menu-text h3-hover font-nunito">base
+                                        ui</span>
+                                </h3>
+                                <span><i class="fa-solid fa-angle-right fs-10"></i></span>
+                            </div>
+                        </li>
+                        <li class="side-nav-item">
+                            <div class="row justify-between">
+                                <h3 class="h3-hover row align-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" data-lucide="sparkles" class="lucide lucide-sparkles">
+                                        <path
+                                            d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z">
+                                        </path>
+                                        <path d="M20 3v4"></path>
+                                        <path d="M22 5h-4"></path>
+                                        <path d="M4 17v2"></path>
+                                        <path d="M5 18H3"></path>
+                                    </svg>
+                                    <span
+                                        class=" fs-14 ff-roboto fw-400 fc-second tt-capital menu-text h3-hover font-nunito">extended
+                                        ui</span>
+                                </h3>
+                                <span><i class="fa-solid fa-angle-right fs-10"></i></span>
+                            </div>
+                        </li>
+                        <li class="side-nav-item">
+                            <div class="row justify-between">
+                                <h3 class="h3-hover row align-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" data-lucide="box" class="lucide lucide-box">
+                                        <path
+                                            d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z">
+                                        </path>
+                                        <path d="m3.3 7 8.7 5 8.7-5"></path>
+                                        <path d="M12 22V12"></path>
+                                    </svg>
+                                    <span
+                                        class=" fs-14 ff-roboto fw-400 fc-second tt-capital menu-text h3-hover font-nunito">icons</span>
+                                </h3>
+                                <span><i class="fa-solid fa-angle-right fs-10"></i></span>
+                            </div>
+                        </li>
+                        <li class="side-nav-item">
+                            <div class="row justify-between">
+                                <h3 class="h3-hover row align-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" data-lucide="bar-chart-2"
+                                        class="lucide lucide-bar-chart-2">
+                                        <line x1="18" x2="18" y1="20" y2="10"></line>
+                                        <line x1="12" x2="12" y1="20" y2="4"></line>
+                                        <line x1="6" x2="6" y1="20" y2="14"></line>
+                                    </svg>
+                                    <span
+                                        class=" fs-14 ff-roboto fw-400 fc-second tt-capital menu-text h3-hover font-nunito">charts</span>
+                                </h3>
+                                <span><i class="fa-solid fa-angle-right fs-10"></i></span>
+                            </div>
+                        </li>
+                        <li class="side-nav-item">
+                            <div class="row justify-between">
+                                <h3 class="h3-hover row align-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" data-lucide="disc" class="lucide lucide-disc">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <circle cx="12" cy="12" r="2"></circle>
+                                    </svg>
+                                    <span
+                                        class=" fs-14 ff-roboto fw-400 fc-second tt-capital menu-text h3-hover font-nunito">forms</span>
+                                </h3>
+                                <span><i class="fa-solid fa-angle-right fs-10"></i></span>
+                            </div>
+                        </li>
+                        <li class="side-nav-item">
+                            <div class="row justify-between">
+                                <h3 class="h3-hover row align-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" data-lucide="table" class="lucide lucide-table">
+                                        <path d="M12 3v18"></path>
+                                        <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                                        <path d="M3 9h18"></path>
+                                        <path d="M3 15h18"></path>
+                                    </svg>
+                                    <span
+                                        class=" fs-14 ff-roboto fw-400 fc-second tt-capital menu-text h3-hover font-nunito">tables</span>
+                                </h3>
+                                <span><i class="fa-solid fa-angle-right fs-10"></i></span>
+                            </div>
+                        </li>
+                        <li class="side-nav-item">
+                            <div class="row justify-between">
+                                <h3 class="h3-hover ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" data-lucide="map" class="lucide lucide-map">
+                                        <path
+                                            d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z">
+                                        </path>
+                                        <path d="M15 5.764v15"></path>
+                                        <path d="M9 3.236v15"></path>
+                                    </svg>
+                                    <span
+                                        class=" fs-14 ff-roboto fw-400 fc-second tt-capital menu-text h3-hover map-nav font-nunito">maps</span>
+                                </h3>
+                                <span><i class="fa-solid fa-angle-right fs-10"></i></span>
+                            </div>
+                        </li>
+                        <li class="tt-upper fs-10 ff-roboto fw-400 fc-second side-nav-title">more</li>
+                        <li class="side-nav-item">
+                            <div class="row justify-between">
+                                <h3 class="h3-hover row align-center">
+                                    <i class="bi bi-grid fs-16"></i>
+                                    <span
+                                        class=" fs-14 ff-roboto fw-400 fc-second tt-capital menu-text h3-hover view-voice font-nunito">layouts</span>
+                                </h3>
+                                <span><i class="fa-solid fa-angle-right fs-10"></i></span>
+                            </div>
+                        </li>
+                        <li class="side-nav-item">
+                            <div class="row justify-between">
+                                <h3 class="h3-hover row align-center">
+                                    <div class="multi-level">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" data-lucide="share"
+                                            class="lucide lucide-share">
+                                            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                                            <polyline points="16 6 12 2 8 6"></polyline>
+                                            <line x1="12" x2="12" y1="2" y2="15"></line>
+                                        </svg>
+                                    </div>
+                                    <span
+                                        class=" fs-14 ff-roboto fw-400 fc-second tt-capital menu-text h3-hover view-voice font-nunito">multi
+                                        level</span>
+                                </h3>
+                                <span><i class="fa-solid fa-angle-right fs-10"></i></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- |..starting----page----content..| -->
+
+            <div class="w-87">
+                <div class="head-content-foot bg-white">
+                    <div class="row justify-between">
+                        <h4 class="fs-16 ff-roboto fc-prime tt-capital">dashboard</h4>
+                        <div class="row">
+                            <p class="fs-14 ff-roboto  fw-400 fc-second tt-capital fc-prime">abstract<i
+                                    class="fa-solid fa-angle-right fa-angle-right-dash fs-10"></i></p>
+                            <p class="fs-14 ff-roboto  fw-400 fc-second tt-capital">dashboard</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- |..w-25-ratio..| -->
+
+                <div class="row">
+                    <div class="w-25">
+                        <div class="card bg-white ">
+                            <div class="row">
+                                <div class="w-80">
+                                    <div class="card-content width-1-box">
+                                        <h4 class="tot-rev fs-12 fc-second tt-upper ff-roboto padding-to-10px">total
+                                            revenue</h4>
+                                        <h3 class="doll fs-16 ff-roboto padding-to-10px">$1.25M</h3>
+                                        <i class="fa-solid fa-arrow-up  fs-10 "></i>
+                                        <span class="fs-12 ff-roboto fa-arrow-up">15.34%</span><span
+                                            class="tot-rev fs-12 ff-roboto fc-second tt-capital last-month font-nunito">
+                                            since last month</span>
+                                    </div>
+                                </div>
+                                <div class="w-20">
+                                    <div class="card-icon">
+                                        <i class="fa-solid fa-wallet"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="images/green-line.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="w-25">
+                        <div class="card bg-white ">
+                            <div class="row">
+                                <div class="w-80">
+                                    <div class="card-content width-1-box">
+                                        <h4 class="tot-rev fs-12 fc-second tt-upper ff-roboto padding-to-10px">Products
+                                            Sold</h4>
+                                        <h3 class="doll fs-16 ff-roboto padding-to-10px">48.7k</h3>
+                                        <i class="fa-solid fa-arrow-up  fs-10 "></i>
+                                        <span class=" fs-12 ff-roboto fa-arrow-up">10.12%</span><span
+                                            class="tot-rev fs-12 ff-roboto fc-second tt-capital last-month font-nunito">
+                                            since last month</span>
+                                    </div>
+                                </div>
+                                <div class="w-20">
+                                    <div class="card-icon svg-card-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
+                                            viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="M10.023 2a1.75 1.75 0 0 0 0 3.5h4a1.75 1.75 0 1 0 0-3.5zM3.887 16.205C3.029 12.773 2.6 11.058 3.5 9.904S6.17 8.75 9.708 8.75h4.63c3.538 0 5.306 0 6.207 1.154s.472 2.87-.386 6.301c-.546 2.183-.818 3.274-1.632 3.91c-.814.635-1.939.635-4.189.635h-4.63c-2.25 0-3.375 0-4.189-.635c-.814-.636-1.087-1.727-1.632-3.91"
+                                                opacity=".5"></path>
+                                            <path fill="currentColor"
+                                                d="M15.604 4.502a1.74 1.74 0 0 0 .002-1.501c.683.005 1.216.036 1.691.222a3.25 3.25 0 0 1 1.426 1.09c.367.494.54 1.127.777 1.999l.046.17l.513 2.963c-.409-.282-.936-.45-1.618-.55l-.36-2.087c-.285-1.04-.388-1.367-.562-1.601a1.75 1.75 0 0 0-.768-.587c-.22-.086-.485-.11-1.147-.118M8.441 3.001a1.74 1.74 0 0 0 .002 1.501c-.662.007-.927.032-1.147.118a1.75 1.75 0 0 0-.768.587c-.174.234-.277.561-.561 1.6l-.361 2.089c-.682.1-1.209.267-1.618.548l.513-2.962l.046-.17c.237-.872.41-1.505.777-2A3.25 3.25 0 0 1 6.75 3.224c.475-.186 1.008-.217 1.691-.222">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="images/Screenshot 2025-01-16 143947.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="w-25">
+                        <div class="card bg-white ">
+                            <div class="row">
+                                <div class="w-80">
+                                    <div class="card-content width-1-box">
+                                        <h4 class="tot-rev fs-12 fc-second tt-upper ff-roboto padding-to-10px">New
+                                            Customers</h4>
+                                        <h3 class="doll fs-16 ff-roboto padding-to-10px">1.2k</h3>
+                                        <i class="fa-solid fa-arrow-up  fs-10 percent-people"></i>
+                                        <span class="percent-people fs-12 ff-roboto fa-arrow-up">5.47%</span><span
+                                            class="tot-rev fs-12 ff-roboto fc-second tt-capital last-month font-nunito">
+                                            since last month</span>
+                                    </div>
+                                </div>
+                                <div class="w-20">
+                                    <div class="card-icon user">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                            viewBox="0 0 24 24">
+                                            <circle cx="12" cy="6" r="4" fill="currentColor"></circle>
+                                            <path fill="currentColor"
+                                                d="M20 17.5c0 2.485 0 4.5-8 4.5s-8-2.015-8-4.5S7.582 13 12 13s8 2.015 8 4.5"
+                                                opacity=".5"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="images/red-line.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="w-25">
+                        <div class="card bg-white ">
+                            <div class="row">
+                                <div class="w-80">
+                                    <div class="card-content width-1-box">
+                                        <h4 class="tot-rev fs-12 fc-second tt-upper ff-roboto padding-to-10px">Profit
+                                            Margin</h4>
+                                        <h3 class="doll fs-16 ff-roboto padding-to-10px">38.5%</h3>
+                                        <i class="fa-solid fa-arrow-up  fs-10 "></i>
+                                        <span class=" fs-12 ff-roboto fa-arrow-up"> 8.21%</span><span
+                                            class="tot-rev fs-12 ff-roboto fc-second tt-capital last-month font-nunito">
+                                            since last month</span>
+                                    </div>
+                                </div>
+                                <div class="w-20">
+                                    <div class="card-icon ratio">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
+                                            viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12"
+                                                opacity=".5"></path>
+                                            <path fill="currentColor"
+                                                d="M14.5 10.75a.75.75 0 0 1 0-1.5H17a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0v-.69l-2.013 2.013a1.75 1.75 0 0 1-2.474 0l-1.586-1.586a.25.25 0 0 0-.354 0L7.53 14.53a.75.75 0 0 1-1.06-1.06l2.293-2.293a1.75 1.75 0 0 1 2.474 0l1.586 1.586a.25.25 0 0 0 .354 0l2.012-2.013z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="images/yellow-line.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- |..statics-55-card..| -->
+
+                <div class="row align-center">
+                    <div class="w-55">
+                        <div class="card-55">
+                            <div class="static tt-capital ff-roboto fs-16 bg-white">
+                                <div class="row justify-between">
+                                    <h4 class="fw-700 font-nunito">Statistics</h4>
+                                    <i class="fa-solid fa-ellipsis-vertical fs-14"></i>
+                                </div>
+                            </div>
+                            <div class="income-row">
+                                <div class="row align-center justify-center ">
+                                    <div class="w-25">
+                                        <div class="income-box ff-roboto tt-capital fw-500 fc-second fs-14">
+                                            <p class="font-nunito">Monthly Income</p>
+                                            <div class="row svg-section">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    data-lucide="arrow-down-left"
+                                                    class="lucide lucide-arrow-down-left text-success me-1 col-blue-svg fs-14">
+                                                    <path d="M17 7 7 17"></path>
+                                                    <path d="M17 17H7V7"></path>
+                                                </svg>
+                                                <span class="doll-dark fs-16">$35,200</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-25">
+                                        <div class="income-box ff-roboto tt-capital fw-500 fc-second fs-14">
+                                            <p class="font-nunito">Monthly Expenses</p>
+                                            <div class="row svg-section">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    data-lucide="arrow-up-right"
+                                                    class="lucide lucide-arrow-up-right text-danger me-1 col-red ">
+                                                    <path d="M7 7h10v10"></path>
+                                                    <path d="M7 17 17 7"></path>
+                                                </svg>
+                                                <span class="doll-dark fs-16">$18,900</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-25">
+                                        <div class="income-box ff-roboto tt-capital fw-500 fc-second fs-14">
+                                            <p class="font-nunito">Invested Capital</p>
+                                            <div class="row svg-section ">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    data-lucide="bar-chart" class="lucide lucide-bar-chart me-1 dark">
+                                                    <line x1="12" x2="12" y1="20" y2="10"></line>
+                                                    <line x1="18" x2="18" y1="20" y2="4"></line>
+                                                    <line x1="6" x2="6" y1="20" y2="16"></line>
+                                                </svg>
+                                                <span class="doll-dark fs-16 ">$5,200</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-25">
+                                        <div class="income-box ff-roboto tt-capital fw-500 fc-second fs-14">
+                                            <p class="font-nunito">Available Savings</p>
+                                            <div class="row svg-section ">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    data-lucide="landmark" class="lucide lucide-landmark me-1 dark">
+                                                    <line x1="3" x2="21" y1="22" y2="22"></line>
+                                                    <line x1="6" x2="6" y1="18" y2="11"></line>
+                                                    <line x1="10" x2="10" y1="18" y2="11"></line>
+                                                    <line x1="14" x2="14" y1="18" y2="11"></line>
+                                                    <line x1="18" x2="18" y1="18" y2="11"></line>
+                                                    <polygon points="12 2 20 7 4 7"></polygon>
+                                                </svg>
+                                                <span class="doll-dark fs-16 ">$8,100</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rate-value bg-white">
+                                <div class="row align-center justify-center">
+                                    <div class="row ">
+                                        <div class="sky-dot"></div>
+                                        <span class="fc-second tt-capital ff-roboto fs-14 rate">conversion rate</span>
+                                    </div>
+                                    <div class="row">
+                                        <div class="sky-purple"></div>
+                                        <span class="fc-second tt-capital ff-roboto fs-14 rate">average sale
+                                            value</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ratio-img padding bg-white">
+                                <img src="images/ratio-img.jpg" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="w-45 ">
+                        <div class="revuenue bg-white">
+                            <div class="static tt-capital ff-roboto fs-16 revenue-45">
+                                <div class="row justify-between">
+                                    <h4 class="fw-700 fs-14 fc-prime font-nunito">Total Revenue</h4>
+                                    <i class="fa-solid fa-ellipsis-vertical fs-14"></i>
+                                </div>
+                            </div>
+                            <div class="row justify-between">
+                                <div class="w-33 py-0">
+                                    <div class="rev-width">
+                                        <p class="font-nunito fc-prime fs-14">Revenue</p>
+                                        <div class="row align-center">
+                                            <div class="svg-block fs-14">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    data-lucide="arrow-down-left"
+                                                    class="lucide lucide-arrow-down-left text-success me-1">
+                                                    <path d="M17 7 7 17"></path>
+                                                    <path d="M17 17H7V7"></path>
+                                                </svg>
+                                            </div>
+                                            <span class="font-nunito doll-dark fs-14 fw-700 dark-span">$29.5k</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-33 py-0">
+                                    <div class="rev-width">
+                                        <p class="font-nunito fc-prime fs-14">Expenses</p>
+                                        <div class="row align-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                data-lucide="arrow-up-right"
+                                                class="lucide lucide-arrow-up-right text-danger me-1 col-svg-red">
+                                                <path d="M7 7h10v10"></path>
+                                                <path d="M7 17 17 7"></path>
+                                            </svg>
+                                            <span class="font-nunito doll-dark fs-14 fw-700 dark-span">$15.07k</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-33 py-0">
+                                    <div class="rev-width border-rigth-0">
+                                        <p class="font-nunito fc-prime fs-14">Investment</p>
+                                        <div class="row align-center">
+                                            <i class="bi bi-bar-chart fs-14"></i>
+                                            <span class="font-nunito doll-dark fs-14 fw-700 dark-span">$3.6k</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="green-ratio-img padding-to-10px">
+                                <img src="images/green-ratio.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- |..recent-new-users..| -->
+
+                <div class="row">
+                    <div class="w-33">
+                        <div class="head-users bg-white">
+                            <div class="row justify-between bg-white">
+                                <h4 class="users-detail light-black">Recent New Users</h4>
+                                <div class="row justify-between">
+                                    <button class="bg-white import-box tt-capital fs-14">import <i
+                                            class="bi bi-download bi-arrow-clockwise fs-12"></i></button>
+                                    <button class="bg-white export-box tt-capital fs-14">export<i
+                                            class="bi bi-arrow-clockwise"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="active-user  light-black font-nunito fs-14">
+                            <p>895k Active users out of 965k</p>
+                        </div>
+                        <div class="news-card bg-white border-bottom-color light-black">
+                            <div class="row">
+                                <div class="w-40 fs-14 font-nunito tt-capital">
+                                    <p>name</p>
+                                </div>
+                                <div class="w-20 fs-14 font-nunito tt-capital ">
+                                    <p class="role-div">role</p>
+                                </div>
+                                <div class="w-20 fs-14 font-nunito tt-capital">
+                                    <p>status</p>
+                                </div>
+                                <div class="w-20 fs-14 font-nunito tt-capital ">
+                                    <p>action</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-card bg-white border-bottom-color">
+                            <div class="row align-center">
+                                <div class="w-40">
+                                    <div class="row align-center justify-between">
+                                        <img src="images/avatar-1.jpg" class="avtar-img" alt="">
+                                        <p class="w-70 fs-12 tt-capital fw-500 font-nunito">john doe</p>
+                                    </div>
+                                </div>
+                                <div class="w-20">
+                                   <p class="w-87 role-div tt-capital font-nunito fs-12"> Administrator</p>
+                                </div>
+                                <div class="w-20">
+                                   <div class="row align-center">
+                                    <div class="fa-circle"></div>
+                                    <p class="active-pad fs-12 tt-capital font-nunito">active</p>
+                                   </div>
+                                </div>
+                                <div class="w-20 three-vertical-dot light-black fw-400 fs-12">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-card bg-white border-bottom-color">
+                            <div class="row align-center">
+                                <div class="w-40">
+                                    <div class="row align-center justify-between">
+                                        <img src="images/avatar-2 (1).jpg" class="avtar-img" alt="">
+                                        <p class="w-70 fs-12 tt-capital fw-500 font-nunito">Jane Smith</p>
+                                    </div>
+                                </div>
+                                <div class="w-20">
+                                   <p class="w-87 role-div tt-capital font-nunito fs-12"> Editor</p>
+                                </div>
+                                <div class="w-20">
+                                   <div class="row align-center">
+                                    <div class="fa-circle pending-color"></div>
+                                    <p class="active-pad fs-12 tt-capital font-nunito"> Pending</p>
+                                   </div>
+                                </div>
+                                <div class="w-20 three-vertical-dot light-black fw-400 fs-12">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-card bg-white border-bottom-color">
+                            <div class="row align-center">
+                                <div class="w-40">
+                                    <div class="row align-center justify-between">
+                                        <img src="images/avatar-1.jpg" class="avtar-img" alt="">
+                                        <p class="w-70 fs-12 tt-capital fw-500 font-nunito">john doe</p>
+                                    </div>
+                                </div>
+                                <div class="w-20">
+                                   <p class="w-87 role-div tt-capital font-nunito fs-12"> Administrator</p>
+                                </div>
+                                <div class="w-20">
+                                   <div class="row align-center">
+                                    <div class="fa-circle"></div>
+                                    <p class="active-pad fs-12 tt-capital font-nunito">active</p>
+                                   </div>
+                                </div>
+                                <div class="w-20 three-vertical-dot light-black fw-400 fs-12">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-card bg-white border-bottom-color">
+                            <div class="row align-center">
+                                <div class="w-40">
+                                    <div class="row align-center justify-between">
+                                        <img src="images/avatar-1.jpg" class="avtar-img" alt="">
+                                        <p class="w-70 fs-12 tt-capital fw-500 font-nunito">john doe</p>
+                                    </div>
+                                </div>
+                                <div class="w-20">
+                                   <p class="w-87 role-div tt-capital font-nunito fs-12"> Administrator</p>
+                                </div>
+                                <div class="w-20">
+                                   <div class="row align-center">
+                                    <div class="fa-circle"></div>
+                                    <p class="active-pad fs-12 tt-capital font-nunito">active</p>
+                                   </div>
+                                </div>
+                                <div class="w-20 three-vertical-dot light-black fw-400 fs-12">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-card bg-white border-bottom-color">
+                            <div class="row align-center">
+                                <div class="w-40">
+                                    <div class="row align-center justify-between">
+                                        <img src="images/avatar-1.jpg" class="avtar-img" alt="">
+                                        <p class="w-70 fs-12 tt-capital fw-500 font-nunito">john doe</p>
+                                    </div>
+                                </div>
+                                <div class="w-20">
+                                   <p class="w-87 role-div tt-capital font-nunito fs-12"> Administrator</p>
+                                </div>
+                                <div class="w-20">
+                                   <div class="row align-center">
+                                    <div class="fa-circle"></div>
+                                    <p class="active-pad fs-12 tt-capital font-nunito">active</p>
+                                   </div>
+                                </div>
+                                <div class="w-20 three-vertical-dot light-black fw-400 fs-12">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i> 
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
