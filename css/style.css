@@ -220,10 +220,19 @@ a{
     background-color: var(--white);
 }
 
+/* padding margin classes */
+
+.mt-10{
+    margin-top: 10px;
+}
 
 /* |..header..|    */
 
-
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+}
 .coman-row {
     background-color: var(--bacgroundblue);
     width: 100%;
@@ -320,8 +329,9 @@ input::placeholder {
     padding-left: 20px;
     position: fixed;
     left: 0;
-    height: 100%;
+    height: 100vh;
     width: 13%;
+    padding-top:80px ;
 }
 
 .side-nav-item {
@@ -630,4 +640,36 @@ nav ul li:nth-child(2){
 
 .border-trans{
     border-bottom: 1px dashed rgba(128, 128, 128, 0.338);
+}
+.scroll-bar{
+    overflow-y: scroll;
+    height: 465px;
+}
+.icon-img-box{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #e1eef9;
+    border-radius: 100% ;
+    padding: 12px;
+    color:rgb(79, 189, 233);
+    background-color: #e5f5fc;
+    position: relative;
+}
+.icon-img-box::after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 80px;
+    background-color: black;
+    top: 100%;
+    left: 50%;
+    z-index: 11;
+}
+.scroll-bar .row:last-child .icon-img-box::after{
+    background-color: red;
+    width: 0;
+    height: 0;
+}
+.sold-item{
+    padding: 10px;
 }
