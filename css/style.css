@@ -75,6 +75,9 @@ img{
 .black-dark{
     color: rgba(9, 1, 1, 0.828);
 }
+.adv-color{
+    color: rgba(135, 133, 133, 0.863);
+}
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -736,7 +739,7 @@ nav ul li:nth-child(2){
 .scroll-bar::-webkit-scrollbar-thumb
 {
 	border-radius: 20px;
-	background-color: #2c7ab6;
+	background-color: #9c9fa1;
 }
 
 .down-arrow{
@@ -749,4 +752,30 @@ nav ul li:nth-child(2){
 .transaction{
     margin-left: 10px;
     padding: 10px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.192);
+
+}
+.dol{
+    color: var(--green);
+}
+.text-success-red{
+    color: var(--red);
+}
+.transaction-red{
+    margin-left: 12px;
+}
+.scrollbar-y{
+    height: 465px;
+    overflow-y: scroll;
+}
+.scrollbar-y::-webkit-scrollbar
+{
+	width: 5px;
+    height: 5px;
+}
+
+.scrollbar-y::-webkit-scrollbar-thumb
+{
+	border-radius: 20px;
+	background-color: #9c9fa1;
 }
