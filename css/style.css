@@ -89,6 +89,10 @@ img{
     text-align: center;
 }
 
+.text-end{
+    text-align:end;
+}
+
 .align-center {
     align-items: center;
 }
@@ -268,6 +272,9 @@ a{
 }
 .pt-75{
     padding-top:75px;
+}
+.mt-3{
+   margin-top: 3px;
 }
 
 /* |..header..|    */
@@ -778,4 +785,59 @@ nav ul li:nth-child(2){
 {
 	border-radius: 20px;
 	background-color: #9c9fa1;
+}
+
+
+            /* view-invoice */
+
+
+.invoice-h1{
+    padding-top: 30px;
+    color: #000000aa;
+} 
+
+.abstack-bill{
+  margin: 20px;
+}
+
+.paid-box{
+    /* border: 1px solid black; */
+    display: inline;
+    background-color: #e2f6ef;
+    color: rgb(62, 195, 151);
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 20px;
+}
+.invoice-form{
+    padding-left: 10px;
+}
+.invoice-form h5{
+    color: #000000d2;
+    padding-bottom: 10px;
+    font-family: var(--fontfamily);
+}
+
+.invoice-form h6{
+    color: #000000af;
+    font-size: 14px;
+    font-family: var(--fontfamily);
+    margin-bottom: 10px;
+}
+
+.invoice-form span{
+    font-family: var(--fontfamily);
+    color: #00000046;
+    font-size: 14px;
+}
+
+.address{
+    font-family: var(--fontfamily);
+    color: #575454a8;
+    font-size: 14px;
+    padding-bottom: 10px;
+
+}
+.address p{
+    padding-bottom: 10px;
 }
