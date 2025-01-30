@@ -78,6 +78,9 @@ img{
 .adv-color{
     color: rgba(135, 133, 133, 0.863);
 }
+.bg-light{
+    background-color: rgb( 238, 242, 247);
+}
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -140,18 +143,29 @@ img{
     width: 40%;
     padding: 10px;
 }
+.w-8 {
+    width: 8%;
+    padding: 10px;
+}
 
 .w-45{
     width: 45%;
     padding: 10px;
 }
-.w-25 {
+.w-27 {
     width: 25%;
+    padding: 10px;
+}
+.w-28{
+    width: 27%;
     padding: 10px;
 }
 
 .w-50 {
     width: 50%;
+}
+.w-65 {
+    width: 65%;
 }
 
 .w-22 {
@@ -191,6 +205,10 @@ img{
     width: 80%;
     padding: 10px;
 }
+.w-60 {
+    width: 60%;
+    padding: 10px;
+}
 
 .w-55{
     width: 55%;
@@ -203,6 +221,11 @@ img{
 
 .w-100 {
     width: 100%;
+}
+
+.w-90 {
+    width: 90%;
+    padding: 10px;
 }
 .w-10 {
     width: 10%;
@@ -257,7 +280,9 @@ a{
 .p-0{
     padding: 0;
 }
-
+.py-10{
+    padding: 10px 0px;
+}
 .m-0{
     margin: 0;
 }
@@ -797,9 +822,14 @@ nav ul li:nth-child(2){
 } 
 
 .abstack-bill{
-  margin: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
 }
 
+.row .w-10 img{
+}
 .paid-box{
     /* border: 1px solid black; */
     display: inline;
@@ -811,11 +841,13 @@ nav ul li:nth-child(2){
 }
 .invoice-form{
     padding-left: 10px;
+    padding-top: 20px;
 }
 .invoice-form h5{
     color: #000000d2;
     padding-bottom: 10px;
     font-family: var(--fontfamily);
+    margin-bottom: 10px;
 }
 
 .invoice-form h6{
@@ -823,6 +855,7 @@ nav ul li:nth-child(2){
     font-size: 14px;
     font-family: var(--fontfamily);
     margin-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 .invoice-form span{
@@ -835,9 +868,91 @@ nav ul li:nth-child(2){
     font-family: var(--fontfamily);
     color: #575454a8;
     font-size: 14px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 
 }
 .address p{
-    padding-bottom: 10px;
+    /* padding-bottom: 10px;     */
 }
+
+.phone{
+    font-family: var(--fontfamily);
+    color: #575454a8;
+    font-size: 14px;
+    padding-bottom: 20px;
+    
+}
+.in-date{
+    font-family: var(--fontfamily);
+    color: #575454a8;
+    font-size: 14px;
+    color: #000000d2;
+}
+.date-ap{
+    font-family: var(--fontfamily);
+    color: #575454a8;
+    font-size: 14px;
+    padding-top: 5px;
+}
+.dashtag{
+    font-family: var(--fontfamily);
+    color: #575454a8;
+    font-size: 15px;
+   
+}
+.product-details-head{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.details-of-prod{
+    text-transform: capitalize;
+    font-size: 15px;
+    font-family: var(--font);
+    color: #4C4C5C;
+    font-weight: 600;
+}
+.Quantity{
+    color: #4C4C5C;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: var(--font);
+    text-transform: capitalize;
+}
+.details-svg{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.development{
+    padding-left: 10px;
+}
+.React{
+    padding-left: 3px;
+}
+.flower-row{
+    padding: 10px;
+}
+.flower-quantity-units{
+    color: #4c4c5cb5;
+    /* font-weight: 650; */
+}
+.advance{
+    color: #4c4c5ca8;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: var(--font);
+}
+.sub-total{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.total{
+    color: #4C4C5C;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: var(--font);
+    text-transform: capitalize;
+}
+.free{
+    color: #4c4c5c97;
+}
+
