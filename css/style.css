@@ -76,6 +76,9 @@ img {
     color: #4c4c5ce8;
 }
 
+.bg-transparent{
+    background-color: rgba(128, 128, 128, 0.076);
+}
 .dark {
     color: #00000097;
 }
@@ -371,6 +374,10 @@ a {
 
 .pt-75 {
     padding-top: 75px;
+}
+
+.pl-65{
+    padding-left: 65px;
 }
 
 .mt-3 {
