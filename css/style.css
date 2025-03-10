@@ -1415,6 +1415,10 @@ nav ul li:nth-child(2) {
  color: rgb(62,195,150);
     
 }
+.border-circle-sky{
+ color: rgb(19, 147, 198);
+    
+}
 .process{
     position: relative;
 
@@ -1442,6 +1446,32 @@ nav ul li:nth-child(2) {
     height: 5px;
     border-radius: 10px;
     background-color: rgb(162, 195, 62);
+    top: -8px;
+    left: 0px;
+}
+.process-2{
+    position: relative;
+}
+.process-2::after{
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: rgb(19, 147, 198);
+    top: -8px;
+    left: 0px;
+}
+.process-3{
+    position: relative;
+}
+.process-3::after{
+    position: absolute;
+    content: "";
+    width: 120px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: rgb(62,195,150);
     top: -8px;
     left: 0px;
 }
