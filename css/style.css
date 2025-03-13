@@ -598,8 +598,13 @@ input::placeholder {
 
 .head-content-foot {
     padding: 10px;
+    transition: all 0.5s ;
 }
 
+.head-content-foot .row:hover
+{
+    color: var(--cyan);
+}
 .card {
     margin-top: 10px;
     margin-left: 10px;
