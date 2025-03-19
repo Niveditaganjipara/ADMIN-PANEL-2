@@ -21,7 +21,10 @@ body {
 .fc-prime {
     color: var(--primary);
 }
-
+.color-blue
+{
+   color: var(--bacgroundblue);
+}
 :root {
     --primary: #6c757d;
     --secondary: #4c4c5c85;
@@ -51,6 +54,10 @@ body {
 }
 .green{
     color: var(--green);
+}
+.cyan
+{
+    color: var(--cyan);
 }
 .light-dark-gray {
     color: rgba(84, 80, 80, 0.727);
@@ -379,6 +386,12 @@ a {
 
 .mt-10 {
     margin-top: 10px;
+}
+.mt-15 {
+    margin-top: 15px;
+}
+.mt-80 {
+    margin-top: 80px;
 }
 .mt-5
 {
@@ -1643,7 +1656,7 @@ nav ul li:nth-child(2) {
 {
     position: absolute;
     content: "";
-    height:250vh;
+    height:100vh;
     width: 5px;
     background-color: rgba(93, 95, 93, 0.178);
     /* padding: 5px; */
@@ -1662,7 +1675,8 @@ nav ul li:nth-child(2) {
     padding: 8px 18px;    
     font-weight: 500;
     font-size: 18px;
-    border-radius: 3px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     z-index: 1;
     top: -133px;
     left: 75px;
@@ -1892,6 +1906,62 @@ nav ul li:nth-child(2) {
 {
     background-color: #348cd4d0;
 }
-.avatar-5 {
+.avatar-5  img{
     width: 50px;
+    border-radius: 100px;
+}
+.director
+{
+
+}
+.john-text
+{
+    padding-left: 20px;
+    padding-top: 5px;
+}
+.payment-option
+{
+    padding-top: 20px;
+    font-family: var(--font);
+    /* font-size: 14px; */
+
+}
+.yesterday-btn button
+{
+    position: absolute;
+    text-transform: capitalize;
+    background-color: #348CD4;
+    color: #fff;
+    border: none;
+    padding: 8px 18px;    
+    font-weight: 500;
+    font-size: 18px;
+    z-index: 1;
+    top: 20px;
+    left: 64px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.user-data-yellow-card
+{
+    height: 55px;
+    width: 55px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eef2f7;
+    border:4px solid white;
+    top: 10px;
+    left: 89px;
+    z-index: 1;
+}
+.dedicated
+{
+    padding-top: 10px;
+}
+.lays-outs
+{
+    padding-top: 6px;
 }
