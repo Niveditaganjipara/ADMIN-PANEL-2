@@ -1656,7 +1656,7 @@ nav ul li:nth-child(2) {
 {
     position: absolute;
     content: "";
-    height:100vh;
+    height:235vh;
     width: 5px;
     background-color: rgba(93, 95, 93, 0.178);
     /* padding: 5px; */
