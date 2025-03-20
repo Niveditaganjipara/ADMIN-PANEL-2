@@ -532,6 +532,7 @@ header {
     height: 100%;
     margin-left: 20px;
     padding-right: 20px;
+    border-radius: 5px;
 }
 
 .left-side-info {
@@ -606,6 +607,7 @@ input::placeholder {
     padding-top: 12px;
     padding-left: 10px;
 }
+
 
 .side-nav-title {
     letter-spacing: 1.3px;
@@ -1248,7 +1250,7 @@ nav ul li:nth-child(2) {
 
 .signature {
     width: 150px;
-    height: 50px;
+    height: 80px;
     /* margin: 10px; */
     /* margin-left: 10px; */
     padding-left: 30px;
@@ -1656,7 +1658,7 @@ nav ul li:nth-child(2) {
 {
     position: absolute;
     content: "";
-    height:235vh;
+    height:2287px;
     width: 5px;
     background-color: rgba(93, 95, 93, 0.178);
     /* padding: 5px; */
